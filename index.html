@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='http://code.jquery.com/jquery-1.10.1.min.js'></script>
+</head>
+<body >
+    <div id="content" style="display: flex;justify-content: center;align-items: center;"></div>
+    <img src="hunter.jpg" id="hunter" alt="" style="transform: scale(0.3,0.3);">
+    <img src="seer.jpg" id="seer" alt="" style="transform: scale(0.3,0.3);">
+    <img src="werewolf.jpg" id="werewolf" alt="" style="transform: scale(0.3,0.3);">
+    <img src="king.jpg" id="king" alt="" style="transform: scale(0.3,0.3);">
+    <img src="villager.jpg" id="villager" alt="" style="transform: scale(0.3,0.3);">
+    <script>
+        
+        const content = document.getElementById('content');
+        const socket = io();
+        socket.on('return', function(data){
+            alert(data);
+        });
+        // socket.on('createImg1', function() {
+        //     var hunter = document.getElementById('hunter')
+        //     hunter.setAttribute('display',"none")
+        //     var seer = document.getElementById("seer")
+        //     seer.setAttribute('dislay', 'none')
+        //     var villager = document.getElementById('villager')
+        //     villager.setAttribute('display','none')
+        //     var werewolf = document.getElementById('werewolf')
+        //     werewolf.setAttribute('display','none')
+        // })
+        // socket.on('createImg2', function() {
+        //     var seer = document.getElementById("seer")
+        //     seer.setAttribute('dislay', 'none')
+        //     var villager = document.getElementById('villager')
+        //     villager.setAttribute('display','none')
+        //     var werewolf = document.getElementById('werewolf')
+        //     werewolf.setAttribute('display','none')
+        //     var king = document.getElementById('king')
+        //     king.setAttribute("display" ,'none')
+        // })
+        // socket.on('createImg3', function() {
+        //     var villager = document.getElementById('villager')
+        //     villager.setAttribute('display','none')
+        //     var werewolf = document.getElementById('werewolf')
+        //     werewolf.setAttribute('display','none')
+        //     var king = document.getElementById('king')
+        //     king.setAttribute("display" ,'none')
+        //     var hunter = document.getElementById('hunter')
+        //     hunter.setAttribute('display','none')
+        // })
+        // socket.on('createImg4', function() {
+        //     var werewolf = document.getElementById('werewolf')
+        //     werewolf.setAttribute('display','none')
+        //     var king = document.getElementById('king')
+        //     king.setAttribute("display" ,'none')
+        //     var hunter = document.getElementById('hunter')
+        //     hunter.setAttribute('display','none')
+        //     var seer = document.getElementById('seer')
+        //     seer.setAttribute('display', 'none')
+        // })
+        // socket.on('createImg5', function() {
+        //     var king = document.getElementById('king')
+        //     king.setAttribute("display" ,'none')
+        //     var hunter = document.getElementById('hunter')
+        //     hunter.setAttribute('display','none')
+        //     var seer = document.getElementById('seer')
+        //     seer.setAttribute('display', 'none')
+        //     var villager = document.getElementById('villager')
+        //     villager.setAttribute('display','none')
+        // })
+    </script>
+</body>
+</html>
